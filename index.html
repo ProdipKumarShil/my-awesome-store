@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- header section -->
+    <header>
+        <nav class="navbar bg-warning navbar-expand-lg ">
+            <div class="container">
+                <a onclick="displayData(jsonArr)" class="navbar-brand fw-bold" href="#">My Awesome Store</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                    aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarScroll">
+
+                    <div class="d-flex" role="search">
+                        <input id="searchField" class="form-control me-2" type="search" placeholder="Your Product" aria-label="Search">
+                        <button class="btn btn-outline-dark" type="submit">Search</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- main section -->
+    <main class="container">
+        <!-- short section start -->
+        <section class="border border-warning rounded py-2 mt-2">
+            <h3 class="text-warning ps-2 mb-2">Categorised by</h3>
+            <button class="btn btn-warning ms-2 " onclick="mens(jsonArr, men)">Mens fashion</button>
+            <button class="btn btn-warning ms-2" onclick="mens(jsonArr, woman)">Womans fashion</button>
+            <button class="btn btn-warning ms-2" onclick="mens(jsonArr, electronics)">Electronics</button>
+            <button class="btn btn-warning ms-2" onclick="shortByPrice()" >Short by price</button>
+        </section>
+        <!-- short section end -->
+
+        <!-- spinner section start -->
+        <section id="showSpinner" class="text-center border border-warning rounded mt-4 py-5">
+            <div class=" spinner-border text-warning" style="width: 3rem; height: 3rem;" role="status">
+                <span class=" visually-hidden">Loading...</span>
+            </div>
+            <h1 class="text-warning">Please wait loading
+                <span class="spinner-grow" style="width: 0.4rem; height: 0.4rem; animation-delay: 1s;"></span>
+                <span class="spinner-grow" style="width: 0.4rem; height: 0.4rem; animation-delay: 2s;"></span>
+                <span class="spinner-grow" style="width: 0.4rem; height: 0.4rem; animation-delay: 3s;"></span>
+                <span class="spinner-grow" style="width: 0.4rem; height: 0.4rem; animation-delay: 4s;"></span>
+                <span class="spinner-grow" style="width: 0.4rem; height: 0.4rem; animation-delay: 5s;"></span>
+                <span class="spinner-grow" style="width: 0.4rem; height: 0.4rem; animation-delay: 6s;"></span>
+            </h1>
+        </section>
+        <!-- spinner section end -->
+
+        <!-- card section start -->
+        <section class="row row-cols-1 row-cols-md-3 gy-3" id="item-container">
+            <!-- all cards goes here -->
+        </section>
+        <!-- card section end -->
+    </main>
+
+    <!-- footer start -->
+    <footer class="mt-5 bg-warning mb-0 text-center py-4" >
+        <h4>&copy; 2023 reserver by Prodip Kumar Shil</h4>
+    </footer>
+    <!-- footer end -->
+
+    <!-- scripts -->
+    <script src="./main.js"></script>
+    <script src="./bootstrap/bootstrap.min.js"></script>
+</body>
+
+</html>
